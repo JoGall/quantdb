@@ -1,0 +1,3 @@
+* create config.sh file to define global parameters (e.g. psql host, database, user...)
+* modify sh to update stocks (get last date for each stock from stock_price table and feed to quantmod)
+* move CSVs from loading to archived when successfully added to target
