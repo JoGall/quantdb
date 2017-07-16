@@ -1,0 +1,1 @@
+\copy ( SELECT symbol, max(dt) AS last_date FROM ss.price GROUP BY symbol ) TO './loading/latest_dates.csv' CSV HEADER ;

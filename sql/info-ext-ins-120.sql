@@ -1,0 +1,1 @@
+\copy ss_ext.ext_info FROM stdin DELIMITER ',' CSV HEADER

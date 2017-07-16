@@ -1,0 +1,1 @@
+\copy ss_ext.ext_price FROM STDIN DELIMITER ',' CSV HEADER
