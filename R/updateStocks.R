@@ -15,8 +15,7 @@ current_date <- Sys.Date()
 latestDates <- read.csv(paste0(quantmod_dir, "/loading/latest_dates.csv"))
 
 # check whether database needs updating
-if(strftime(current_date,'%A') == "Sunday") lastMarketDate <- current_date - 2
-if(strftime(current_date,'%A') == "Saturday") lastMarketDate <- current_date - 1
+lastMarketDate <- ifelse(strftime(current_date,'%A') == "Sunday", current_date - 2, ifelse(strftime(current_date,'%A') == "Saturday", current_date - 1, current_date))
 latestDates <- subset(latestDates, as.Date(last_date) < lastMarketDate)
 
 # get prices
